@@ -21,9 +21,9 @@ convert is a jQuery plugin that you can call on a selector to convert from one u
 * from: the unit you want to convert from (default is oz)
 * to: the unit you want to convert from (default is gm)
 
-convert currently only supports weight conversions
+### Weight Conversions
 
-Imperial
+####Imperial
 * dram: dr
 * ounce: oz
 * pound: lb
@@ -32,8 +32,23 @@ Imperial
 * hundredweigth: cwt
 * ton: ton
 
-Metric
+####Metric
 * milligram: mg
 * gram: gm
 * kilogram: kg
 * tonne: Mg
+
+### Length Conversions
+
+####Standard
+* millimeter: mm
+* centimeter: cm
+* meter: m
+* kilometer: km
+
+####Metric
+* inch: in
+* foot: ft
+* yard: yd
+* mile: mi
+
