@@ -23,7 +23,7 @@ convert is a jQuery plugin that you can call on a selector to convert from one u
 
 ### Weight Conversions
 
-####Imperial
+#### Imperial
 * dram: dr
 * ounce: oz
 * pound: lb
@@ -32,7 +32,7 @@ convert is a jQuery plugin that you can call on a selector to convert from one u
 * hundredweigth: cwt
 * ton: ton
 
-####Metric
+#### Metric
 * milligram: mg
 * gram: gm
 * kilogram: kg
@@ -40,15 +40,31 @@ convert is a jQuery plugin that you can call on a selector to convert from one u
 
 ### Length Conversions
 
-####Standard
+#### Standard
 * millimeter: mm
 * centimeter: cm
 * meter: m
 * kilometer: km
 
-####Metric
+#### Metric
 * inch: in
 * foot: ft
 * yard: yd
 * mile: mi
+
+### Vol Conversions
+
+#### Standard
+
+* Fluid Ounce: fl oz
+* Cup: cup
+* Pint: pt
+* Quart: qt
+* Gallon: gal
+
+#### Metric
+
+* centileter: cl
+* milliliter: ml
+* liter: l
 

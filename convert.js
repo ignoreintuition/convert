@@ -1,3 +1,9 @@
+// convert.js
+// https://github.com/ignoreintuition/convert
+// Created by Brian Greig
+// Last updated 8/6/2016
+// A jQuery plugin for converting selectors to different units
+
 (function($) {
 	$.fn.convert = function(options) {
 		var settings = $.extend({
@@ -30,6 +36,12 @@ var convert = function(amt, from, to) {
 		METRIC_LEN = ['mm', 'cm', 'm', 'km'],
 		METRIC_LEN_UNIT = [0.001, .01, 1, 1000],
 		
+		METRIC_VOL = ['cl', 'ml', 'l'],
+		METRIC_VOL_UNIT = [0.01, 0.001, 1],
+
+		STD_VOL = ['fl oz', 'cup', 'pt', 'qt', 'gal']
+		STD_VOL_UNIT = [1, 8, 16, 32, 128]
+
 		cAmt = 0;
 
 	// Weight Conversions
@@ -72,8 +84,28 @@ var convert = function(amt, from, to) {
 		cAmt = cAmt / STD_LEN_UNIT[STD_LEN.indexOf(to)];
 		return cAmt;
 
+	// Volume Conversions
+	} else if (METRIC_VOL.indexOf(from) > -1 && METRIC_VOL.indexOf(to) > -1) {
+		cAmt = amt * METRIC_VOL_UNIT[METRIC_VOL.indexOf(from)];
+		cAmt = cAmt / METRIC_VOL_UNIT[METRIC_VOL.indexOf(to)];
+		return cAmt;
+	} else if (STD_VOL.indexOf(from) > -1 && STD_VOL.indexOf(to) > -1) {
+		cAmt = amt * STD_VOL_UNIT[STD_VOL.indexOf(from)];
+		cAmt = cAmt / STD_VOL_UNIT[STD_VOL.indexOf(to)];
+		return cAmt;
+	} else if (STD_VOL.indexOf(from) > -1 && METRIC_VOL.indexOf(to) > -1) {
+		cAmt = amt * STD_VOL_UNIT[STD_VOL.indexOf(from)];
+		cAmt = cAmt / 33.814022;
+		cAmt = cAmt / METRIC_VOL_UNIT[METRIC_VOL.indexOf(to)];
+		return cAmt;
+	} else if (METRIC_VOL.indexOf(from) > -1 && STD_VOL.indexOf(to) > -1) {
+		cAmt = amt * METRIC_VOL_UNIT[METRIC_VOL.indexOf(from)];
+		cAmt = cAmt * 33.814022;
+		cAmt = cAmt / STD_VOL_UNIT[STD_VOL.indexOf(to)];
+		return cAmt;
+
 	// Default
 	} else {
-		return -1;
+		return 0;
 	}
 }
