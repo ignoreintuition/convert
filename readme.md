@@ -71,5 +71,5 @@ convert is a jQuery plugin that you can call on a selector to convert from one u
 ### Temperature
 
 * celcius: C
-* farenhite: F
+* fahrenheit: F
 
