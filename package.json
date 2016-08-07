@@ -1,12 +1,14 @@
 {
-  "name": "convert",
+  "name": "jconvert",
   "version": "1.0.0",
-  "description": "",
+  "description": "jQuery plugin that you can call on a selector to convert from one unit to another.",
+  "homepage": "http://resurgencewebdesign.com",
+  "keywords" : ["jquery-plugin", "ecosystem:jquery", "conversion", "metrics", "standard", "imperial"],
   "main": "convert.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Brian Greig",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.1.0"

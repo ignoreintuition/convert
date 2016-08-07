@@ -1,5 +1,11 @@
-# convert - A simple conversion utility jQuery plugin
+# jconvert - A simple conversion utility jQuery plugin
 convert is a jQuery plugin that you can call on a selector to convert from one unit to another. Supports weight, length, volume, and temperature
+
+## Installation
+
+```
+npm install jconvert
+```
 
 ## Usage
 
