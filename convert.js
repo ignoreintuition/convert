@@ -42,6 +42,8 @@ var convert = function(amt, from, to) {
 		STD_VOL = ['fl oz', 'cup', 'pt', 'qt', 'gal']
 		STD_VOL_UNIT = [1, 8, 16, 32, 128]
 
+		TEMP = ['F', 'C']
+
 		cAmt = 0;
 
 	// Weight Conversions
@@ -104,8 +106,19 @@ var convert = function(amt, from, to) {
 		cAmt = cAmt / STD_VOL_UNIT[STD_VOL.indexOf(to)];
 		return cAmt;
 
+	// Temperature Conversions
+	} else if (TEMP.indexOf(from) > -1 && TEMP.indexOf(to) > -1) {
+		if(from == 'F' && to == 'C') {
+			cAmt = (amt - 32) * 5/9;
+		} else if (from == 'C' && to == 'F') {
+			cAmt = amt * 9/5 + 32; 
+		} else {
+			cAmt = amt;
+		}
+	return cAmt;
+
 	// Default
 	} else {
-		return 0;
+		return amt;
 	}
 }

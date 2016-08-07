@@ -1,5 +1,5 @@
 # convert - A simple conversion utility jQuery plugin
-convert is a jQuery plugin that you can call on a selector to convert from one unit to another. 
+convert is a jQuery plugin that you can call on a selector to convert from one unit to another. Supports weight, length, volume, and temperature
 
 ## Usage
 
@@ -56,15 +56,20 @@ convert is a jQuery plugin that you can call on a selector to convert from one u
 
 #### Standard
 
-* Fluid Ounce: fl oz
-* Cup: cup
-* Pint: pt
-* Quart: qt
-* Gallon: gal
+* fluid Ounce: fl oz
+* cup: cup
+* pint: pt
+* quart: qt
+* gallon: gal
 
 #### Metric
 
 * centileter: cl
 * milliliter: ml
 * liter: l
+
+### Temperature
+
+* celcius: C
+* farenhite: F
 
