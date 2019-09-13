@@ -39,8 +39,8 @@ var convert = function(amt, from, to) {
 		METRIC_VOL = ['cl', 'ml', 'l'],
 		METRIC_VOL_UNIT = [0.01, 0.001, 1],
 
-		STD_VOL = ['fl oz', 'cup', 'pt', 'qt', 'gal']
-		STD_VOL_UNIT = [1, 8, 16, 32, 128]
+		STD_VOL = ['tsp', 'tbsp', 'fl oz', 'cup', 'pt', 'qt', 'gal']
+		STD_VOL_UNIT = [0.166667, 0.5, 1, 8, 16, 32, 128]
 
 		TEMP = ['F', 'C']
 
